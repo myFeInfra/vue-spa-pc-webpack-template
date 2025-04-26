@@ -8,7 +8,7 @@ module.exports = {
     { value: '✅ test', name: '✅ test:     测试相关' },
     { value: '🚀 perf', name: '🚀 perf:     性能优化' },
     { value: '🔧 chore', name: '🔧 chore:    构建过程或工具变动' },
-    { value: '⏪ revert', name: '⏪ revert:   回滚' }
+    { value: '⏪ revert', name: '⏪ revert:   回滚' },
   ],
   messages: {
     type: '选择提交类型:',
@@ -17,7 +17,7 @@ module.exports = {
     body: '详细说明(可选):\n',
     breaking: '不兼容变更说明(可选):\n',
     footer: '关联问题(可选):\n',
-    confirmCommit: '确认提交?'
+    confirmCommit: '确认提交?',
   },
   allowCustomScopes: true,
   allowBreakingChanges: ['feat', 'fix'],
@@ -27,6 +27,6 @@ module.exports = {
     { name: 'component' },
     { name: 'style' },
     { name: 'config' },
-    { name: 'test' }
-  ]
+    { name: 'test' },
+  ],
 }
