@@ -1,0 +1,109 @@
+{
+  "name": "vue-spa-pc-webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "webpack serve --config webpack.config.ts --env mode=development",
+    "build": "webpack --config webpack.config.ts --env mode=production",
+    "preview": "webpack serve --config webpack.config.ts --env mode=preview",
+    "format": "npx prettier --write .",
+    "commit": "cz",
+    "lint": "eslint --ext .js,.vue,.ts src --fix",
+    "lint:style": "if exist src\\*.css (stylelint --fix src/**/*.{css,less,scss}) else (echo No style files found && exit 0)",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.9.0",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.25.1",
+    "@jest/types": "^29.6.3",
+    "@swc/core": "^1.11.22",
+    "@swc/jest": "^0.2.38",
+    "@testing-library/vue": "^8.1.0",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.15.2",
+    "@typescript-eslint/eslint-plugin": "^8.31.0",
+    "@typescript-eslint/parser": "^8.31.0",
+    "@unocss/webpack": "66.1.0-beta.12",
+    "@vue/vue3-jest": "^29.2.6",
+    "browserslist": "^4.24.4",
+    "clean-webpack-plugin": "^4.0.0",
+    "commitizen": "^4.3.1",
+    "commitlint": "^19.8.0",
+    "compression-webpack-plugin": "^11.1.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "cz-customizable": "6.3.0",
+    "eslint": "^9.25.1",
+    "eslint-plugin-vue": "^10.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "less-loader": "^12.2.0",
+    "lint-staged": "^15.5.1",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "postcss-less": "^6.0.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.6",
+    "postcss-scss": "^4.0.9",
+    "prettier": "^3.5.3",
+    "sass": "^1.87.0",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "stylelint": "^16.19.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-order": "^7.0.0",
+    "swc": "^1.0.11",
+    "swc-loader": "^0.2.6",
+    "terser-webpack-plugin": "^5.3.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "unocss": "66.1.0-beta.12",
+    "unplugin-auto-import": "^19.1.2",
+    "unplugin-vue-components": "^28.5.0",
+    "vue-eslint-parser": "^10.1.3",
+    "vue-loader": "^17.4.2",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "element-plus": "^2.9.8",
+    "normalize.css": "^8.0.1",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
+  }
+}
