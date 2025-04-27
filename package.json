@@ -8,7 +8,7 @@
     "dev": "webpack serve --config webpack.config.ts --env mode=development",
     "build": "webpack --config webpack.config.ts --env mode=production",
     "preview": "webpack serve --config webpack.config.ts --env mode=preview",
-    "format": "npx prettier --write .",
+    "format": "npx prettier --write src",
     "commit": "cz",
     "lint": "eslint --ext .js,.vue,.ts src --fix",
     "lint:style": "if exist src\\*.css (stylelint --fix src/**/*.{css,less,scss}) else (echo No style files found && exit 0)",
